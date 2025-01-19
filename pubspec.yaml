@@ -91,3 +91,16 @@ flutter:
   assets:
     - assets/
 
+  fonts:
+    - family: Suit
+      fonts:
+        - asset: assets/fonts/SUIT-Bold.ttf
+        - asset: assets/fonts/SUIT-ExtraBold.ttf
+        - asset: assets/fonts/SUIT-ExtraLight.ttf
+        - asset: assets/fonts/SUIT-Heavy.ttf
+        - asset: assets/fonts/SUIT-Light.ttf
+        - asset: assets/fonts/SUIT-Medium.ttf
+        - asset: assets/fonts/SUIT-Regular.ttf
+        - asset: assets/fonts/SUIT-SemiBold.ttf
+        - asset: assets/fonts/SUIT-Thin.ttf
+

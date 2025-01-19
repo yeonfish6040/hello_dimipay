@@ -2,7 +2,18 @@
 class Assets {
   Assets._();
 
+  static const String assetsFaceSign = 'assets/face_sign.svg';
+  static const String assetsFaceSignDisabled = 'assets/face_sign_disabled.svg';
   static const String assetsLogo = 'assets/Logo.svg';
   static const String assetsProfile = 'assets/profile.png';
+  static const String fontsSUITBold = 'assets/fonts/SUIT-Bold.ttf';
+  static const String fontsSUITExtraBold = 'assets/fonts/SUIT-ExtraBold.ttf';
+  static const String fontsSUITExtraLight = 'assets/fonts/SUIT-ExtraLight.ttf';
+  static const String fontsSUITHeavy = 'assets/fonts/SUIT-Heavy.ttf';
+  static const String fontsSUITLight = 'assets/fonts/SUIT-Light.ttf';
+  static const String fontsSUITMedium = 'assets/fonts/SUIT-Medium.ttf';
+  static const String fontsSUITRegular = 'assets/fonts/SUIT-Regular.ttf';
+  static const String fontsSUITSemiBold = 'assets/fonts/SUIT-SemiBold.ttf';
+  static const String fontsSUITThin = 'assets/fonts/SUIT-Thin.ttf';
 
 }

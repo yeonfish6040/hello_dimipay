@@ -30,9 +30,27 @@ class Home extends StatefulWidget {
 
   @override
   State<Home> createState() => _HomeState();
+
+  static _HomeState? of(BuildContext context) =>
+      context.findAncestorStateOfType<_HomeState>();
 }
 
 class _HomeState extends State<Home> {
+  var user = "이연준";
+  var userDetail = "1학년 3반 24번";
+
+  var isFaceSignAvailable = false;
+
+  void changeFaceSignState() {
+    setState(() {
+      if (isFaceSignAvailable) {
+        isFaceSignAvailable = false;
+      }else {
+        isFaceSignAvailable = true;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MainActivity();
