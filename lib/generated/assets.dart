@@ -4,6 +4,7 @@ class Assets {
 
   static const String assetsFaceSign = 'assets/face_sign.svg';
   static const String assetsFaceSignDisabled = 'assets/face_sign_disabled.svg';
+  static const String assetsImg = 'assets/img.png';
   static const String assetsLogo = 'assets/Logo.svg';
   static const String assetsProfile = 'assets/profile.png';
   static const String fontsSUITBold = 'assets/fonts/SUIT-Bold.ttf';
