@@ -10,11 +10,12 @@
 3. 상태관리 기능이 있다. 뻘짓 안해도 된다! 약간 React랑 비슷한 느낌으로 State가 바뀌면 해당 위젯을 다시 렌더한다.
    1. 이건 좀 별로일지도... 차라리 네이티브처럼 view 단위로 하는게 더 리소스 적게 들 듯. 아니면 위젯을 view 처럼 잘게 쪼개놓아야 하나?
 4. Stateless Widget은 상태를 가지지 않는다. 반대로 Stateful Widget은 상태를 가진다. 
-   1. 앞서 서술했듯이, Stateful Widget은 상태가 변경되면 다시 렌더링 된다.
+   1. 앞서 서술했듯이, Stateful Widget은 상태가 변경되면 다시 렌더된다.
    2. 그런데 여기서 재미있는 점이, Stateful Widget 안에 Stateless Widget이 있을때, 상태가 변경되면 해당 \ 
     상태값이 Stateful Widget 밑에 있는 Stateless Widget에 영향을 주지 않는다면 기존에 Stateless Widget 인스턴스를 재활용하고, \
     영향이 있다면 다시 렌더한다.
-   3. 반대의 경우, 안쪽의 Stateful Widget만 다시 렌더된다.
+   3. 반대의 경우, 안쪽의 Stateful Widget만 다시 렌더된다. 근데 해당 값이 부모의 값에 영향을 받으면 부모까지 다시 렌더한다.
+   4. 그러니까 Stateless Stateful 남발해야징
 4. 약간 UI가 Flex로만 설계되는 감이 있다. 그냥 내가 그러는걸지도.
 5. 라우터를 내가 만들어야한다.
    1. "안드로이드의 Intent가 그리운 나"
