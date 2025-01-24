@@ -4,6 +4,13 @@
 ## About
 저만의 디미페이 키오스크를 구현하여놓은 앱입니다. 혹시 몰라? 좋아보이면 특정 부분에서는 채택해주실지.
 
+## Build environment
+Flutter: 3.27.2 - stable\
+Dart: 3.6.1\
+Xcode: 16.2 (16C5032a)\
+Android SDK: Version 29\
+Java:  Zulu 8
+
 ## Researches
 1. flutter는 web, ios, macos, android, linux, windows 빌드가 다 된다! ~~쓸대없어~~
 2. UI는 대부분 Widget이라는 것으로 구성된다. 모든 Widget은 Element를 가지는데, 이 부분은 나중에 심도있게 다루어봐야겠다. *
