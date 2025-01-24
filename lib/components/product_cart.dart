@@ -68,9 +68,9 @@ class ProductCart extends StatelessWidget {
     var state = Home.of(context)!;
     
     return Expanded(
-      child: SingleChildScrollView(
-        child: ConstrainedBox(
-          constraints: BoxConstraints(maxHeight: getHeightByPercent(context, 100)),
+      child: Container(
+        height: getHeightByPercent(context, 100) - getHeightByPercent(context, 4) - getHeightByPercent(context, 20) - 16,
+        child: SingleChildScrollView(
           child: Column(
             spacing: 16,
             children: state.cartList.map((product) {
@@ -78,7 +78,7 @@ class ProductCart extends StatelessWidget {
             }).toList(),
           ),
         ),
-      ),
+      )
     );
   }
 }

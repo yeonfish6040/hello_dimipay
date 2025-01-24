@@ -26,4 +26,4 @@ Java:  Zulu 8
 4. 약간 UI가 Flex로만 설계되는 감이 있다. 그냥 내가 그러는걸지도.
 5. 라우터를 내가 만들어야한다.
    1. "안드로이드의 Intent가 그리운 나"
-6. SingleChildScrollView를 사용할때는 Constrained Box를 이용하여 full height를 만들어 줄 수 있다!
+6. SingleChildScrollView를 사용할때는 Constrained Box를 이용하여 full height를 만들어 줄 수 있다! -> 버그있음

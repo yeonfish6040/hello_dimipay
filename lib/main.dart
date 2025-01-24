@@ -48,15 +48,15 @@ class _HomeState extends State<Home> {
   List<ProductDTO> productList = [
     ProductDTO("1", "감자칩", 1200, displayOnBottomBar: true),
     ProductDTO("2", "고구마칩", 1200, displayOnBottomBar: true),
-    ProductDTO("3", "양파칩", 1200),
-    ProductDTO("4", "사과칩", 1200),
-    ProductDTO("5", "배칩", 1200),
-    ProductDTO("6", "귤칩", 1200),
-    ProductDTO("7", "바나나 칩", 1200),
-    ProductDTO("8", "맛있는 칩", 1200),
-    ProductDTO("9", "하리보 칩", 1200),
-    ProductDTO("10", "피쉬 앤 칩", 1200),
-    ProductDTO("11", "먹으면 뿅가는 칩", 1200),
+    ProductDTO("3", "양파칩", 1200, displayOnBottomBar: true),
+    ProductDTO("4", "사과칩", 1200, displayOnBottomBar: true),
+    ProductDTO("5", "배칩", 1200, displayOnBottomBar: true),
+    ProductDTO("6", "귤칩", 1200, displayOnBottomBar: true),
+    ProductDTO("7", "바나나 칩", 1200, displayOnBottomBar: true),
+    ProductDTO("8", "맛있는 칩", 1200, displayOnBottomBar: true),
+    ProductDTO("9", "하리보 칩", 1200, displayOnBottomBar: true),
+    ProductDTO("10", "피쉬 앤 칩", 1200, displayOnBottomBar: true),
+    ProductDTO("11", "먹으면 뿅가는 칩", 1200, displayOnBottomBar: true),
   ];
   List<ProductDTO> cartList = [];
 

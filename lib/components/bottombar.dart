@@ -52,23 +52,21 @@ class BottomBar extends StatelessWidget {
     var paddingH = getHeightByPercent(context, 3);
     return Container(
       height: getHeightByPercent(context, 20),
+      width: getWidthByPercent(context, 100) - getHeightByPercent(context, 4),
       padding: EdgeInsets.symmetric(vertical: paddingV, horizontal: paddingH),
       decoration: CustomBoxDecoration.widget.value,
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
-        child: ConstrainedBox(
-          constraints: BoxConstraints(maxWidth: getWidthByPercent(context, 100)),
-          child: Row(
-            spacing: 30,
-            children: (() {
-              return products.map((product) {
-                return GestureDetector(
-                  onTap: () => product.addToCart(context),
-                  child: ProductCard(name: product.name, price: product.price),
-                );
-              });
-            })().toList(),
-          ),
+        child: Row(
+          spacing: 30,
+          children: (() {
+            return products.map((product) {
+              return GestureDetector(
+                onTap: () => product.addToCart(context),
+                child: ProductCard(name: product.name, price: product.price),
+              );
+            });
+          })().toList(),
         ),
       ),
     );
