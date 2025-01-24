@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hello_dimipay/activities/main_activity.dart';
@@ -19,7 +21,7 @@ class Runner extends StatelessWidget {
       title: 'Dimipay kiosk demo',
       theme: ThemeData(
         scaffoldBackgroundColor: CustomColor.primary.value,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
+        colorScheme: ColorScheme.fromSeed(seedColor: CustomColor.primaryInverse.value),
         useMaterial3: true,
       ),
       home: const Home(),
@@ -45,7 +47,7 @@ class _HomeState extends State<Home> {
 
   List<ProductDTO> productList = [
     ProductDTO("1", "감자칩", 1200, displayOnBottomBar: true),
-    ProductDTO("2", "고구마칩", 1200),
+    ProductDTO("2", "고구마칩", 1200, displayOnBottomBar: true),
     ProductDTO("3", "양파칩", 1200),
     ProductDTO("4", "사과칩", 1200),
     ProductDTO("5", "배칩", 1200),
@@ -69,16 +71,34 @@ class _HomeState extends State<Home> {
   }
 
   void addProductToCart(ProductDTO product) {
-    var exists = cartList.where((e) => e.id == product.id);
-    if (exists.isEmpty) {
-      cartList.add(product.add());
-    }else {
-      exists.first.add();
-    }
-    
-    if (exists.length > 1) {
-      throw Exception("Error: error integrity check failed.");
-    }  
+    setState(() {
+      var exists = cartList.where((e) => e.id == product.id);
+      if (exists.isEmpty) {
+        cartList.add(product.add());
+      }else {
+        exists.first.add();
+      }
+
+      if (exists.length > 1) {
+        throw Exception("Error: error integrity check failed.");
+      }
+    });
+  }
+
+  void removeProductFromCart(ProductDTO product) {
+    setState(() {
+      var exists = cartList.where((e) => e.id == product.id);
+      if (exists.isNotEmpty) {
+        exists.first.sub();
+        if (exists.first.quantity == 0) {
+          cartList.removeWhere((e) => e.id == product.id);
+        }  
+      }
+
+      if (exists.length > 1) {
+        throw Exception("Error: error integrity check failed.");
+      }
+    });
   }
 
   @override

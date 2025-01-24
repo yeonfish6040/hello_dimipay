@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello_dimipay/dto/product_dto.dart';
+import 'package:hello_dimipay/maps/box_decoration.dart';
 import 'package:hello_dimipay/maps/colors.dart';
 import 'package:hello_dimipay/maps/text_style.dart';
 import 'package:hello_dimipay/util.dart';
@@ -51,21 +52,23 @@ class BottomBar extends StatelessWidget {
     var paddingH = getHeightByPercent(context, 3);
     return Container(
       height: getHeightByPercent(context, 20),
-      width: getWidthByPercent(context, 100) - getHeightByPercent(context, 4),
       padding: EdgeInsets.symmetric(vertical: paddingV, horizontal: paddingH),
-      decoration: BoxDecoration(
-        color: const Color(0xFFFFFFFF),
-        borderRadius: BorderRadius.circular(12),
-      ),
+      decoration: CustomBoxDecoration.widget.value,
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
-        child: Row(
-          spacing: 30,
-          children: (() {
-            return products.map((product) {
-              return ProductCard(name: product.name, price: product.price);
-            });
-          })().toList(),
+        child: ConstrainedBox(
+          constraints: BoxConstraints(maxWidth: getWidthByPercent(context, 100)),
+          child: Row(
+            spacing: 30,
+            children: (() {
+              return products.map((product) {
+                return GestureDetector(
+                  onTap: () => product.addToCart(context),
+                  child: ProductCard(name: product.name, price: product.price),
+                );
+              });
+            })().toList(),
+          ),
         ),
       ),
     );

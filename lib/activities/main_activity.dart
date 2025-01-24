@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello_dimipay/components/bottombar.dart';
+import 'package:hello_dimipay/components/product_cart.dart';
 import 'package:hello_dimipay/components/sidebar.dart';
 import 'package:hello_dimipay/activities/widget_frame.dart';
 import 'package:hello_dimipay/main.dart';
@@ -18,8 +19,10 @@ class MainActivity extends StatelessWidget {
             Expanded(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
+                spacing: 16,
                 children: [
-                  Sidebar()
+                  Sidebar(),
+                  ProductCart(),
                 ],
               )
             ),

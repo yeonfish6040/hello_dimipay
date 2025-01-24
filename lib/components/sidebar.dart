@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hello_dimipay/main.dart';
+import 'package:hello_dimipay/maps/box_decoration.dart';
 import 'package:hello_dimipay/util.dart';
 import 'package:hello_dimipay/maps/colors.dart';
 import 'package:hello_dimipay/maps/text_style.dart';
@@ -17,10 +18,7 @@ class ProfileCard extends StatelessWidget {
     var userDetail = Home.of(context)!.userDetail;
     return Container(
       padding: EdgeInsets.symmetric(vertical: padding, horizontal: padding),
-      decoration: BoxDecoration(
-        color: CustomColor.primary.value,
-        borderRadius: BorderRadius.circular(8),
-      ),
+      decoration: CustomBoxDecoration.subWidget.value,
       child: Row(
         spacing: 8,
         children: [
@@ -63,10 +61,7 @@ class Sidebar extends StatelessWidget {
     return Container(
       width: getWidthByPercent(context, 20),
       padding: EdgeInsets.symmetric(vertical: paddingV, horizontal: paddingH),
-      decoration: BoxDecoration(
-        color: const Color(0xFFFFFFFF),
-        borderRadius: BorderRadius.circular(12),
-      ),
+      decoration: CustomBoxDecoration.widget.value,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

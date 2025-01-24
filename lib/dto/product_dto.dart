@@ -26,12 +26,17 @@ class ProductDTO {
   }
 
   ProductDTO sub() {
-    if (quantity > 1) quantity--;
+    if (quantity >= 1) quantity--;
     return this;
   }
 
   ProductDTO addToCart(BuildContext context) {
     Home.of(context)!.addProductToCart(this);
+    return this;
+  }
+
+  ProductDTO removeFromCart(BuildContext context) {
+    Home.of(context)!.removeProductFromCart(this);
     return this;
   }
 }
