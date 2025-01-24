@@ -33,7 +33,7 @@ class CartItem extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
-            spacing: 12,
+            spacing: 14,
             children: [
               GestureDetector(
                 onTap: () => product.addToCart(context),
@@ -43,7 +43,7 @@ class CartItem extends StatelessWidget {
                   child: Text("+"),
                 ),
               ),
-              Text(product.quantity.toString()),
+              Text("${product.quantity} 개"),
               GestureDetector(
                 onTap: () => product.removeFromCart(context),
                 child: Container(
