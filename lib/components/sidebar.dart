@@ -85,7 +85,7 @@ class Sidebar extends StatelessWidget {
 
           // lower
           Column(
-            spacing: 20,
+            spacing: 8,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // face pay btn

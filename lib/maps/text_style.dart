@@ -28,7 +28,7 @@ extension CustomTextStyleExtension on CustomTextStyles {
         return TextStyle(
           fontFamily: "Suit",
           fontSize: 14,
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.w600,
           color: CustomColor.buttonText.value,
         );
     }

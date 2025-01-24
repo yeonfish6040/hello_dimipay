@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_dimipay/dto/product_dto.dart';
 import 'package:hello_dimipay/maps/colors.dart';
 import 'package:hello_dimipay/maps/text_style.dart';
 import 'package:hello_dimipay/util.dart';
@@ -39,7 +40,7 @@ class ProductCard extends StatelessWidget {
 }
 
 class BottomBar extends StatelessWidget {
-  final List<List<String>> products;
+  final List<ProductDTO> products;
 
   const BottomBar({Key? key, required this.products}): super(key: key);
 
@@ -62,7 +63,7 @@ class BottomBar extends StatelessWidget {
           spacing: 30,
           children: (() {
             return products.map((product) {
-              return ProductCard(name: product[0], price: product[1]);
+              return ProductCard(name: product.name, price: product.price);
             });
           })().toList(),
         ),
